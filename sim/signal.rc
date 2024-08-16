@@ -1,0 +1,102 @@
+Magic 271485
+Revision Verdi_O-2018.09-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 27 1177 670 257 105
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/proj/ebu_logic/kaizhou/noc_arbiter/sim/fifo_full_test/testbench.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 12411169.703936 15588041.905637
+cursor 15225001.000000
+marker 5775001.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 3
+; marker line index
+markerPos 48
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/proj/ebu_logic/kaizhou/noc_arbiter/sim/fifo_full_test/testbench.fsdb"
+addSignal -h 15 /noc_tb/noc_clk
+addSignal -h 15 -holdScope noc_reset
+addGroup "device_write" -e FALSE
+addSignal -c ID_GREEN5 -ls solid -lw 1 -h 15 /noc_tb/dev1_if/w_device_valid
+addSignal -c ID_GREEN5 -ls solid -lw 1 -h 15 -holdScope w_device_ready
+addSignal -c ID_GREEN5 -ls solid -lw 1 -h 15 -holdScope w_device_last
+addSignal -c ID_GREEN5 -ls solid -lw 1 -h 15 -holdScope w_device_fragment[31:0]
+addSignal -c ID_YELLOW5 -ls solid -lw 1 -h 15 /noc_tb/dev2_if/w_device_valid
+addSignal -c ID_YELLOW5 -ls solid -lw 1 -h 15 -holdScope w_device_ready
+addSignal -c ID_YELLOW5 -ls solid -lw 1 -h 15 -holdScope w_device_last
+addSignal -c ID_YELLOW5 -ls solid -lw 1 -h 15 -holdScope w_device_fragment[31:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 /noc_tb/dev3_if/w_device_valid
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 -holdScope w_device_ready
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 -holdScope w_device_last
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 -holdScope w_device_fragment[31:0]
+addSignal -c ID_RED5 -ls solid -lw 1 -h 15 /noc_tb/dev4_if/w_device_valid
+addSignal -c ID_RED5 -ls solid -lw 1 -h 15 -holdScope w_device_ready
+addSignal -c ID_RED5 -ls solid -lw 1 -h 15 -holdScope w_device_last
+addSignal -c ID_RED5 -ls solid -lw 1 -h 15 -holdScope w_device_fragment[31:0]
+addSignal -c ID_RED7 -ls solid -lw 1 -h 15 /noc_tb/host_if/r_host_noc_valid
+addSignal -c ID_RED7 -ls solid -lw 1 -h 15 -holdScope r_host_noc_ready
+addSignal -c ID_RED7 -ls solid -lw 1 -h 15 -holdScope r_host_noc_last
+addSignal -c ID_RED7 -ls solid -lw 1 -h 15 -holdScope r_host_noc_fragment[31:0]
+addGroup "host_write"
+addSignal -h 15 /noc_tb/host_if/w_host_noc_valid
+addSignal -h 15 -holdScope w_host_noc_ready
+addSignal -h 15 -holdScope w_host_noc_payload[31:0]
+addSignal -c ID_GREEN5 -ls solid -lw 1 -h 15 /noc_tb/dev1_if/r_device_valid
+addSignal -c ID_GREEN5 -ls solid -lw 1 -h 15 -holdScope r_device_ready
+addSignal -c ID_GREEN5 -ls solid -lw 1 -h 15 -holdScope r_device_last
+addSignal -c ID_GREEN5 -ls solid -lw 1 -h 15 -holdScope r_device_fragment[31:0]
+addSignal -c ID_YELLOW5 -ls solid -lw 1 -h 15 /noc_tb/dev2_if/r_device_valid
+addSignal -c ID_YELLOW5 -ls solid -lw 1 -h 15 -holdScope r_device_ready
+addSignal -c ID_YELLOW5 -ls solid -lw 1 -h 15 -holdScope r_device_last
+addSignal -c ID_YELLOW5 -ls solid -lw 1 -h 15 -holdScope r_device_fragment[31:0]
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 /noc_tb/dev3_if/r_device_valid
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 -holdScope r_device_ready
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 -holdScope r_device_last
+addSignal -c ID_ORANGE5 -ls solid -lw 1 -h 15 -holdScope r_device_fragment[31:0]
+addSignal -c ID_RED5 -ls solid -lw 1 -h 15 /noc_tb/dev4_if/r_device_valid
+addSignal -c ID_RED5 -ls solid -lw 1 -h 15 -holdScope r_device_ready
+addSignal -c ID_RED5 -ls solid -lw 1 -h 15 -holdScope r_device_last
+addSignal -c ID_RED5 -ls solid -lw 1 -h 15 -holdScope r_device_fragment[31:0]
+addGroup "G4"
+addSignal -h 15 /noc_tb/dut/hs_noc_router/noc_pkt_buffer/logic_pushPtr_value[9:0]
+addSignal -h 15 -holdScope logic_popPtr_value[9:0]
+addSignal -h 15 -holdScope logic_empty
+addSignal -h 15 -holdScope logic_full
+addGroup "G5"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+
